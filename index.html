@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Ping Pong</h1>
+    </div>
+    <h2>Let's Play!</h2>
+    <p>Ping Pong will count up to the number you enter with these exceptions:</p>
+    <ul>
+      <li>Numbers that are divisible by 3 will be replaced with Ping</li>
+      <li>Numbers that are divisible by 5 will be replaced with Pong</li>
+      <li>Numbers that are divisible by both 3 and 5 will be replaced with pingpong</li>
+    </ul>
+    <form>
+
+       <div class="form-group">
+         <label for="input">Enter your number here!</label>
+         <input id="input" class="form-control" type="text">
+       </div>
+
+       <button type="submit" class="btn btn-success">Click here to get results!</button>
+
+      <ul id=output>
+      </ul>
+    </form>
+
+  </div>
+</body>
+</html>
