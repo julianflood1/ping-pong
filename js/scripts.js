@@ -1,12 +1,17 @@
+var divisibility = function(number) {
 
-      var divisibility = function(userInput) {
-        if (userInput % 3 === 0) {
-        return "ping";
-      } else if (userInput % 5 === 0) {
-        return "pong";
-      }
-      };
-
+  for (index = 1; index <= number; index ++) {
+    if ((number % 3 === 0) && (number % 5 === 0)) {
+    $("#output").append("<li> pingpong </li>");
+  } else if (number % 5 === 0) {
+    $("#output").append("<li> pong </li>");
+  } else if (number % 3 === 0) {
+    $("#output").append("<li> ping </li>");
+  } else {
+    $("#output").append("<li>" + number + "</li>");
+  }
+}
+};
 
 
 $(document).ready(function() {
@@ -14,32 +19,9 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
 
-    var output = divisibility(userInput);
     var userInput = parseInt($("#userInput").val());
 
-    var total = 0;
-    for (index = 1; index <= userInput; index += 1) {
-      total += 1;
-
-      if (index % 3 === 0) {
-      $("#output").append("ping");
-    } else if (index % 5 === 0) {
-      $("#output").append("pong");
-    } else if ((index % 3 === 0) && (index % 5 === 0)) {
-      $("#output").append("pingpong");
-    };
-
-
-      $("#output").append("<li>" + total + "</li>");
-      // $("#output").text(output);
-      console.log(output);
-
-    }
-
-
-
-
-
+    divisibility(userInput);
 
   });
 });
